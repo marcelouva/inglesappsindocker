@@ -1,0 +1,7 @@
+Este archivo pretende ser una guia para crear un proyecto con Ruby sin utilizar docker.
+
+1 - Instalar Ruby
+2 - Crear el proyecto en github y luego clonarlo a un repositorio local
+3 - Intalar Sinatra con "gem install sinatra","gem install rackup" y sudo apt-get install ruby-dev
+4 - Ejecuto el "bundle install" (este comando  busca el archivo gemfile y descarga las gemas que ahí estén declaradas).
+
