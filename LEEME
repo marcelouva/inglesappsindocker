@@ -8,9 +8,12 @@ Este archivo pretende ser una guia para crear un proyecto con Ruby sin utilizar 
 Modifico el server.rb
 agrego 
 
-set :database, { adapter: "sqlite3", database: "your_database.sqlite3" }
-y ejecuto bundle exec rake db:migrate para correr las migraciones
+set :database, { adapter: "sqlite3", database: "your_databdbingles.sqlite3" }
+y ejecuto 
 
+                bundle exec rake db:migrate 
+
+el comando anterior crea la base de datos ejecutando las migraciones. previamente deben estar creados los modelos y la migración correspondiente.
 -----------------------
 
 
