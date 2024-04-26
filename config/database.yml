@@ -5,13 +5,13 @@ default: &default
 
 development:
   <<: *default
-  database: db/ing_development.sqlite3
+  database: db/ingdevelopment.sqlite3
 
 test:
   <<: *default
-  database: db/ing_test.sqlite3
+  database: db/ingtest.sqlite3
 
 production:
   <<: *default
-  database: db/ing_production.sqlite3
+  database: db/ingproduction.sqlite3
 
