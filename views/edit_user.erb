@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Editar Usuario</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f8f9fa;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .container {
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      width: 300px;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #343a40;
+    }
+    form {
+      display: flex; /* Agregado */
+      flex-direction: column; /* Agregado */
+    }
+    input[type="text"] {
+      margin-bottom: 10px; /* Agregado */
+      padding: 8px; /* Agregado */
+    }
+    button {
+      width: 100%; /* Agregado */
+      padding: 10px; /* Agregado */
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Editar Usuario</h1>
+    <form action="/update_user" method="post">
+      <input type="hidden" name="user_id" value="<%= @user.id %>">
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre" value="<%= @user.name %>">
+      <button type="submit">Guardar cambios</button>
+    </form>
+  </div>
+</body>
+</html>

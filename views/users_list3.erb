@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lista de Usuarios</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f8f9fa;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .container {
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      width: 300px;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #343a40;
+    }
+    ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+    li {
+      background-color: #fff;
+      border-radius: 4px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      padding: 10px;
+      margin-bottom: 10px;
+      display: flex; /* Agregado */
+      justify-content: space-between; /* Agregado */
+      align-items: center; /* Agregado */
+    }
+    form {
+      display: flex; /* Agregado */
+      align-items: center; /* Agregado */
+    }
+    button {
+      width: 80px; /* Ancho fijo para los botones */
+      margin-left: 10px; /* Margen entre los botones */
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Lista de Usuarios</h1>
+    <ul>
+      <% @users.each do |user| %>
+        <li>
+          <span><%= user.name %></span>
+          <!-- Formulario para enviar una solicitud de eliminación con confirmación -->
+          <form action="/delete_user" method="post">
+            <input type="hidden" name="user_id" value="<%= user.id %>">
+            <button type="submit">Eliminar</button>
+          </form>
+
+          <!-- Formulario para enviar una solicitud de modificación -->
+          <form action="/edit_user/<%= user.id %>" method="get">
+            <button type="submit">Modificar</button>
+          </form>
+
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</body>
+</html>

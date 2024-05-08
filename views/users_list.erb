@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Lista de Usuarios</title>
+</head>
+<body>
+  <h1>Lista de Usuarios</h1>
+  <ul>
+    <% @users.each do |user| %>
+      <li><%= user.name %></li> <!-- Asegúrate de cambiar `name` al atributo correcto de tu modelo User -->
+    <% end %>
+  </ul>
+</body>
+</html>

@@ -1,19 +1,21 @@
 GIT
   remote: https://github.com/sinatra/sinatra.git
-  revision: b4f61f59cf8f938db261a6561a69ca61d01e8581
+  revision: 5640495babcb4cfd69ba650b293660b7446402da
   specs:
-    rack-protection (3.0.0)
-      rack
-    sinatra (3.0.0)
-      mustermann (~> 1.0)
-      rack (~> 2.2)
-      rack-protection (= 3.0.0)
+    rack-protection (4.0.0)
+      base64 (>= 0.1.0)
+      rack (>= 3.0.0, < 4)
+    sinatra (4.0.0)
+      mustermann (~> 3.0)
+      rack (>= 3.0.0, < 4)
+      rack-protection (= 4.0.0)
+      rack-session (>= 2.0.0, < 3)
       tilt (~> 2.0)
-    sinatra-contrib (3.0.0)
-      multi_json
-      mustermann (~> 1.0)
-      rack-protection (= 3.0.0)
-      sinatra (= 3.0.0)
+    sinatra-contrib (4.0.0)
+      multi_json (>= 0.0.2)
+      mustermann (~> 3.0)
+      rack-protection (= 4.0.0)
+      sinatra (= 4.0.0)
       tilt (~> 2.0)
 
 GEM
@@ -29,23 +31,27 @@ GEM
       i18n (>= 1.6, < 2)
       minitest (>= 5.1)
       tzinfo (~> 2.0)
+    base64 (0.2.0)
     concurrent-ruby (1.2.2)
     i18n (1.13.0)
       concurrent-ruby (~> 1.0)
     mini_portile2 (2.8.1)
     minitest (5.18.0)
     multi_json (1.15.0)
-    mustermann (1.1.2)
+    mustermann (3.0.0)
       ruby2_keywords (~> 0.0.1)
-    rack (2.2.7)
+    rack (3.0.10)
+    rack-session (2.0.0)
+      rack (>= 3.0.0)
     rake (13.0.6)
     ruby2_keywords (0.0.5)
-    sinatra-activerecord (2.0.26)
+    sinatra-activerecord (2.0.27)
       activerecord (>= 4.1)
       sinatra (>= 1.0)
     sqlite3 (1.6.2)
       mini_portile2 (~> 2.8.0)
     sqlite3 (1.6.2-arm64-darwin)
+    sqlite3 (1.6.2-x64-mingw32)
     tilt (2.1.0)
     tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
@@ -53,6 +59,7 @@ GEM
 PLATFORMS
   arm64-darwin-21
   ruby
+  x64-mingw32
 
 DEPENDENCIES
   multi_json
@@ -63,7 +70,7 @@ DEPENDENCIES
   sqlite3
 
 RUBY VERSION
-   ruby 3.1.2p20
+   ruby 3.0.7p220
 
 BUNDLED WITH
    2.3.25
